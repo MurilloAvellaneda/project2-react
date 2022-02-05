@@ -1,0 +1,11 @@
+.Home {
+    align-items: center;
+    width: 100%;
+  }
+
+.backgroudImg{
+    width: 600px;
+    margin:100px auto;
+    display: block;
+    border-radius: 10px;
+}
