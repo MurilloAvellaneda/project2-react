@@ -4,7 +4,6 @@ import {Route, Routes} from 'react-router-dom';
 import {Home} from "./pages/Home";
 import apiCharacters from "./utils/apiCharacters";
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 function App() {
 

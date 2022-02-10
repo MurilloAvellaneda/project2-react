@@ -11,7 +11,7 @@ class apiCharacters {
   getAllCharacters = async () => {
     try {
       const { data } = await this.api.get(`/characters?ts=thesoer&apikey=${process.env.REACT_APP_API_PUBLIC_KEY}&hash=4fbc26cf582a1f796fbcb150356b839a`)
-      return data
+      return data.data.results
     } catch (error) {
      console.log(error)
       throw new Error('Cannot Fetch Data')
@@ -20,7 +20,7 @@ class apiCharacters {
 
   getOneCharacter = async (id) => {
     try {
-      const { data } = await this.api.get(`/${id}`)
+      const { data } = await this.api.get(`/${id}/characters?ts=thesoer&apikey=${process.env.REACT_APP_API_PUBLIC_KEY}&hash=4fbc26cf582a1f796fbcb150356b839a`)
       return data
     } catch (error) {
       throw new Error('Cannot Fetch Data')
