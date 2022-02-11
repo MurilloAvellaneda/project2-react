@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 
 const HeroCard = ({characters}) => {
+  const filteredCharacters = characters.filter((character) => 
+    character.description.length > 1 && character.thumbnail.path !== "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+  )
   return <>
   {console.log(characters)}
-  {characters.map(character => {
+  {filteredCharacters.map(character => {
     return (<Link 
               key = {character.id}  
               to = {`/${character.id}`}
