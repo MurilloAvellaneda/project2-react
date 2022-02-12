@@ -5,7 +5,6 @@ const HeroCard = ({characters}) => {
     character.description.length > 1 && character.thumbnail.path !== "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
   )
   return <>
-  {console.log(characters)}
   {filteredCharacters.map(character => {
     return (<Link 
               key = {character.id}  
@@ -18,9 +17,6 @@ const HeroCard = ({characters}) => {
               />
               <p>
                 {character.name}
-              </p>
-              <p>
-                {character.description}
               </p>
             </Link>)
   })}
