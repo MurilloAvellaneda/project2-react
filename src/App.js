@@ -8,7 +8,8 @@ import HeroDetails from "./components/HeroDetails";
 
 function App() {
 
-  const [characters, setCharacters] = useState([]) 
+  const [characters, setCharacters] = useState([])
+  const [isAsc, setIsAsc] = useState(true)  
   useEffect(() => {
     const fetchData = async () => {
       const newCharacters = await apiCharacters.getAllCharacters()
@@ -16,12 +17,27 @@ function App() {
     }
     fetchData()
   }, [])
+
+  const handleSortDesc = () => { 
+    const charactersData = [...characters]
+    const sortData = charactersData.sort((a, b) => a.name > b.name ? -1 : a.name < b.name ? 1 : 0) 
+    setCharacters(sortData)
+    setIsAsc(false)
+  }
+
+  const handleSortAsc = () => { 
+    const charactersData = [...characters]
+    const sortData = charactersData.sort((a, b) => a.name > b.name ? 1 : a.name < b.name ? -1 : 0) 
+    setCharacters(sortData)
+    setIsAsc(true)
+  }
+
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/heroes-list" element={<HeroCard characters={characters}/>} />
+        <Route path="/heroes-list" element={<HeroCard characters={characters} handleSortAsc={handleSortAsc} handleSortDesc={handleSortDesc} isAsc={isAsc}/>} />
         <Route path="/:id" element={<HeroDetails />} />
       </Routes>
 
