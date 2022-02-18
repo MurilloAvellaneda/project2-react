@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import SearchHero from "./SearchHero";
 
-const HeroCard = ({characters, handleSortAsc, handleSortDesc, isAsc}) => {
-  const filteredCharacters = characters.filter((character) => 
-    character.description.length > 1 && character.thumbnail.path !== "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+const HeroCard = ({handleSortAsc, handleSortDesc, isAsc, characterSearched, searchCharacters}) => {
+  const filteredCharacters = characterSearched.filter((character) => 
+  character.description.length > 1 && character.thumbnail.path !== "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
   )
   return <>
+  <SearchHero searchCharacters={searchCharacters} />
   <Sidebar handleSortAsc={handleSortAsc} handleSortDesc={handleSortDesc} isAsc={isAsc}/>
   {filteredCharacters.map(character => {
     return (<Link 
