@@ -4,6 +4,10 @@ h1 {
     font-size: 3em
 }
 
+#character-detail-img {
+    width: 500px;
+}
+
 .container {
     width: 75%;
     margin: 0 auto;
@@ -24,13 +28,13 @@ li:first-child {
 }
 
 .series-list {
-    margin: 0;
+    margin: 0 0 10px;
 }
 
 .serie {
     list-style-type: none;
     padding: 5px 0;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .description {
@@ -38,4 +42,31 @@ li:first-child {
     color: white;
     padding: 3px;
     font-size: 1.3em
+}
+
+.series-btn {
+    background-color: rgb(108,32,14);
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    transition: background 0.8s;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: none;
+    margin: 0px 30px 20px;
+    width: 360px;
+    height:100px;
+    border-radius: 30px;
+}
+
+.series-btn:hover {
+        background-color: rgb(187, 0, 0);
+        cursor: pointer;
+}
+
+.buttons-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
