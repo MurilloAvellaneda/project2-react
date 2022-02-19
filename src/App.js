@@ -22,10 +22,6 @@ function App() {
     fetchData()
   }, [])
 
-  console.log(characters)
-  
-  console.log(characterSearched)
-
   const handleSortDesc = () => { 
     const charactersData = [...characterSearched]
     const sortData = charactersData.sort((a, b) => a.name > b.name ? -1 : a.name < b.name ? 1 : 0) 
