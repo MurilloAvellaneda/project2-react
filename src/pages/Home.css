@@ -4,4 +4,14 @@
     height: 599px;
     background-size: cover;
     background-image: url("https://images5.alphacoders.com/439/thumb-1920-439122.jpg");
-  }
+}
+
+audio {
+  width: 100%;
+  height: 15px;
+}
+    
+audio::-webkit-media-controls-enclosure {
+  background-color: rgb(155, 72, 53);
+  border-radius: 0%;
+}

@@ -1,0 +1,9 @@
+button {
+    color: white;
+    transition: background 0.8s;
+    font-weight: bold;
+    background-color: rgb(108,32,14);
+    text-decoration: none;
+    padding: 3px;
+    border: none;
+}
