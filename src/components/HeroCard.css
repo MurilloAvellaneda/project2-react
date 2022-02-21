@@ -10,7 +10,6 @@
     background-color: #a51f1f;
     height: 25px;
     border-right: 1px solid rgb(187, 0, 0);
-    flex-direction: row;
     justify-content: space-around;
     display: flex;
     padding: 3px 15px;
@@ -19,7 +18,6 @@
 .FieldCards{
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
