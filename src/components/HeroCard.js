@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Reoder from './Reoder';
+import Reorder from './Reorder';
 import SearchHero from './SearchHero';
 import './HeroCard.css';
 
@@ -10,7 +10,7 @@ const HeroCard = ({handleSortAsc, handleSortDesc, isAsc, characterSearched, sear
   return <div className='HeroCard'> 
     <div className='filter'>
       <SearchHero searchCharacters={searchCharacters} />
-      <Reoder handleSortAsc={handleSortAsc} handleSortDesc={handleSortDesc} isAsc={isAsc}/>
+      <Reorder handleSortAsc={handleSortAsc} handleSortDesc={handleSortDesc} isAsc={isAsc}/>
     </div>
     <div className='FieldCards'>
     {filteredCharacters.map(character => {

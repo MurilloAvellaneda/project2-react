@@ -1,6 +1,6 @@
 import "./HeroCard.css"
 
-const Reoder = ({handleSortDesc, handleSortAsc, isAsc}) => {
+const Reorder = ({handleSortDesc, handleSortAsc, isAsc}) => {
   return (
     <div>
     {!isAsc ? <button onClick={handleSortAsc}>De A - Z</button> : <button onClick={handleSortDesc}>De Z - A</button>}
@@ -8,4 +8,4 @@ const Reoder = ({handleSortDesc, handleSortAsc, isAsc}) => {
   )  
 }
 
-export default Reoder
+export default Reorder
