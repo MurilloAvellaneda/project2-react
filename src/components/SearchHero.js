@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./HeroCard.css"
 
 const SearchHero = ({searchCharacters}) => {
 
@@ -9,7 +10,7 @@ const SearchHero = ({searchCharacters}) => {
         setInput(event.target.value)
     }
     return (
-        <div>
+        <div className="search">
             <input
                 type = 'text'
                 placeholder = 'Start typing to search'
