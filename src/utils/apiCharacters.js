@@ -3,7 +3,7 @@ class apiCharacters {
 
   constructor () {
     this.api = axios.create({
-      baseURL: "http://gateway.marvel.com/v1/public"
+      baseURL: "https://gateway.marvel.com/v1/public"
     })
   }
 
