@@ -5,6 +5,7 @@ import {Home} from "./pages/Home";
 import apiCharacters from "./utils/apiCharacters";
 import { useState, useEffect } from "react";
 import HeroDetails from "./components/HeroDetails";
+import "./App.css"
 
 function App() {
 
