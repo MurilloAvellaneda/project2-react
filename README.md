@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Wiki Marvel
+# Introduction
+O presente projeto, Wiki Marvel, utiliza dados da API da Marvel. O objetivo é meramente educativo, com os fins de aplicação dos aprendizados em React, como Componentes e Hooks, JSX, incluindo renderização condicional e consumo de APIs via axios.
+
+# Documentation
+Em caso de interesse em replicar o projeto, ou consumir a API, visite: [Marvel API Docs](https://developer.marvel.com/documentation/getting_started).
+
+# Team
+[Murillo](https://github.com/MurilloAvellaneda)
+[Isaias](https://github.com/isaiaslpaiva)
+# Setup
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
