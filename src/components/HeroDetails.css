@@ -1,7 +1,16 @@
-h1 {
+span {
     margin: 15px 0px 5px;
-    color: rgb(108,32,14);
-    font-size: 3em
+    color: white;
+    font-size: 3em;
+    background-color: rgb(108,32,14);
+    font-weight: bold;
+}
+
+.background {
+    background-image: url("https://i.ibb.co/gJxrnr8/beige-marvel-comics-pow-wallpaper-tgzk.jpg");
+    background-repeat: repeat;
+    height: 100%;
+    overflow: auto;
 }
 
 #character-detail-img {
@@ -69,4 +78,38 @@ li:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media (max-width: 1200px)
+{
+    #character-detail-img {
+        width: 60vw;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+
+    .character-img-series {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px auto 
+    }
+
+    .series-btn {
+        width: 40vw;
+        height:60px;
+        border-radius: 30px;
+        margin-top: 20px
+    }
+
+    .description {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 340px) {
+    .series-btn {
+        font-size: 0.7em;
+    }
 }
