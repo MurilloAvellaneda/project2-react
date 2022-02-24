@@ -51,43 +51,45 @@ const HeroDetails = () => {
       <>
         {character.thumbnail ?
         <div>
-          <div className = "container">
-            <h1>{character.name}</h1>
-            <div className = "character-img-series">
-              <img 
-                src={`${character.thumbnail.path}.${character.thumbnail.extension}`} 
-                alt='character'
-                id = "character-detail-img"
-              />
-              <div className = "buttons-list">
-                <div>
-                  {!showSeries ? <button className="series-btn" onClick={showSeriesList}>Show Series</button> : <><button className="series-btn" onClick={hideSeriesList}>Hide Series</button><ul className="series-list">
-                    <li>Series List</li>
-                    {character.series.items.map((series, index) => {
-                      return (
-                        <li className="serie"
-                          key={character.id + index}>
-                          {series.name}
-                        </li>);
-                    }
-                    )}
-                  </ul></>}
-                </div>
-                <div>
-                  {!showComics ? <button className="series-btn" onClick={showComicsList}>Show Comics</button> : <><button className="series-btn" onClick={hideComicsList}>Hide Comics</button><ul className="series-list">
-                    <li>Comics List</li>
-                    {character.comics.items.map((comics, index) => {
-                      return (
-                        <li className="serie"
-                          key={character.id + index}>
-                          {comics.name}
-                        </li>);
-                    }
-                    )}
-                  </ul></>}
-                </div>
-                <div>
-                  <button className="series-btn" onClick={goToMarvel}>See on Marvel Website</button>
+          <div className = "background">
+            <div className = "container">
+              <span>{character.name}</span>
+              <div className = "character-img-series">
+                <img 
+                  src={`${character.thumbnail.path}.${character.thumbnail.extension}`} 
+                  alt='character'
+                  id = "character-detail-img"
+                />
+                <div className = "buttons-list">
+                  <div>
+                    {!showSeries ? <button className="series-btn" onClick={showSeriesList}>Show Series</button> : <><button className="series-btn" onClick={hideSeriesList}>Hide Series</button><ul className="series-list">
+                      <li>Series List</li>
+                      {character.series.items.map((series, index) => {
+                        return (
+                          <li className="serie"
+                            key={character.id + index}>
+                            {series.name}
+                          </li>);
+                      }
+                      )}
+                    </ul></>}
+                  </div>
+                  <div>
+                    {!showComics ? <button className="series-btn" onClick={showComicsList}>Show Comics</button> : <><button className="series-btn" onClick={hideComicsList}>Hide Comics</button><ul className="series-list">
+                      <li>Comics List</li>
+                      {character.comics.items.map((comics, index) => {
+                        return (
+                          <li className="serie"
+                            key={character.id + index}>
+                            {comics.name}
+                          </li>);
+                      }
+                      )}
+                    </ul></>}
+                  </div>
+                  <div>
+                    <button className="series-btn" onClick={goToMarvel}>See on Marvel Website</button>
+                  </div>
                 </div>
               </div>
             </div>
